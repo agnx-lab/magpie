@@ -1,0 +1,42 @@
+{
+  "id": "magpie",
+  "name": "Magpie",
+  "version": "0.1.0",
+  "description": "本机 magpie 网页：外部 Agent 的模型、路由和额度。不改 Agnx 自己的编码会话上游。",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./site/public/img/icon-256.png",
+  "platforms": {
+    "desktop": "supported",
+    "web": "supported",
+    "mobile": "unsupported"
+  },
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-magpie.mjs",
+    "stateFile": "magpie.json",
+    "defaultPort": 3430
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "url-token-then-cookie",
+    "capabilities": ["cookies"],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "magpie.open",
+        "title": "Magpie"
+      }
+    ],
+    "panels": [
+      {
+        "id": "magpie.main",
+        "title": "Magpie"
+      }
+    ]
+  }
+}

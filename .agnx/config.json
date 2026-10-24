@@ -1,0 +1,10 @@
+{
+  "appId": "magpie",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/yetone/magpie"
+  },
+  "updatedAt": "2026-10-14T20:42:16.928Z"
+}
